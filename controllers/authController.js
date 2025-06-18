@@ -200,7 +200,7 @@ const otpResetPasswordController = async (req, res, next) => {
         if (!user) throw createHttpError(404, "User Not Found")
 
         const otp = String(Math.floor(100000 + Math.random() * 900000))
-        // console.log(otp, "otp")
+        
 
         const expireAt = Date.now() + 1 * 60 * 1000;
         // console.log(expireAt, "expire at")
